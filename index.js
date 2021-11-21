@@ -2,7 +2,19 @@ const fs = require("fs/promises");
 const path = require("path");
 
 function format(bookToc) {
-  return bookToc;
+  const lines = bookToc.split("\n").map((p) => p.trimEnd());
+  const res = [];
+  for (const iterator of lines) {
+    for (let i = iterator.length - 1; i >= 0; i--) {
+      if (iterator[i] === " ") {
+        res.push(
+          `${iterator.slice(0, i).trimEnd()} ${iterator.slice(i).trim()}`
+        );
+        break;
+      }
+    }
+  }
+  return res.join("\n");
 }
 
 (async () => {
