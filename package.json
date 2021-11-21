@@ -1,0 +1,9 @@
+{
+  "name": "toc",
+  "version": "1.0.0",
+  "repository": "git@github.com:DiamondYuan/toc.git",
+  "author": "DiamondYuan <admin@diamondyuan.com>",
+  "dependencies": {
+    "@types/node": "^16.11.9"
+  }
+}
